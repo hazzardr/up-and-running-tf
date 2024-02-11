@@ -22,7 +22,7 @@ output "dynamodb_table_name" {
 
 # We use partial configuration which will be passed in via `backend.hcl` to `tf init`
 # e.g.: 
-# $ terraform init -backend-config=backend.hcl
+# $ terraform init -backend-config=../backend.hcl
 #
 # However, Key has to be unique so we don't parameterize it
 terraform {

@@ -1,4 +1,7 @@
-# up and running
+# Terraform Up and Running
 
-Next, you need to create a target group for your ASG using the
-aws_lb_target_group resource
+My repository for the book terraform up and running. 
+
+## Chapter 3
+
+from here, i'm using partial config so don't forget to `tf init -backend-config=../backend.hcl
