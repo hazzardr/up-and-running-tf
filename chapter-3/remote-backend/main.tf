@@ -27,7 +27,7 @@ output "dynamodb_table_name" {
 # However, Key has to be unique so we don't parameterize it
 terraform {
   backend "s3" {
-    key = "global/s3/terraform.tfstate"
+    key = "remote-backend/global/s3/terraform.tfstate"
   }
 }
 
@@ -39,9 +39,9 @@ resource "aws_s3_bucket" "terraform_state" {
   bucket = var.state_bucket_name
 
   # so we don't accidentally delete remote state with a destroy command
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 }
 
 resource "aws_s3_bucket_versioning" "enabled" {
